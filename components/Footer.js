@@ -2,7 +2,7 @@
 const Footer = () => {
 	return(
 		<footer>
-			<p>K-Pop & Cookies © 2021 </p>
+			<p> K-Pop & Cookies © 2021 </p>
 		</footer>
 	)
 }

@@ -22,6 +22,8 @@ const Header = ({setLoading}) => {
 
 	return(
 		<header id='header'>
+		<Link href='/' as='/'>
+			<a style={{height: '64px', width: '80px', borderRadius: '0'}}>
 			<Image
 				src='/logo.jpeg'
 				height='64px'
@@ -29,9 +31,16 @@ const Header = ({setLoading}) => {
 				alt="K-Pop and Cookies logo"
 				className='logo'
 				onClick={() => {
-					setLoading(true)
-			    	router.push('/')
+					if(router.route === '/'){
+					  document.body.scrollTop = 0
+					  document.documentElement.scrollTop = 0
+					}else {
+						setLoading(true)
+					}
 			    }}/>
+			</a>
+		</Link>
+
      		<a className='twitterIcon' href='' target='_blank'>
 	     		<h3>Follow me!</h3>
 	     		<FontAwesomeIcon icon={faTwitterSquare} size='3x' color='black' background='black'/>	     			

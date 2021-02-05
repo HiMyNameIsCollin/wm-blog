@@ -25,6 +25,7 @@ export default function Home(props) {
   const [loading, setLoading] = useState(false)
   const { posts } = props
 
+
   return (
     <div className='home'>
       <Head>
@@ -64,7 +65,7 @@ export default function Home(props) {
               if(i < 8){
                 return(
                   <Link href='/post/[slug]' as={`/post/${post.slug}`}>
-                    <a  onClick={() => setLoading(true)} className='postCard'>
+                    <a key={i} onClick={() => setLoading(true)} className='postCard'>
                       <h3> {post.title}</h3>
                       <img
                         src={post.feature_image}

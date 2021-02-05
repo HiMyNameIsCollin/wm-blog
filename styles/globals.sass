@@ -17,6 +17,7 @@ a
   font-family: 'Poppins', sans-serif
   padding: 0
   margin: 0
+  scroll-behavior: smooth
   z-index: 2
 
 
@@ -149,6 +150,7 @@ header
 		position: relative
 		overflow: hidden
 		transition: .25s all ease-out
+		white-space: nowrap
 		z-index: 1 
 		&::before
 			background: linear-gradient(to top, rgba(240,147,247,1) 0%, rgba(0,204,242,1) 50%, rgba(240,147,247,1) 100%)
@@ -165,6 +167,8 @@ header
 			path
 				max-height: 42px
 				max-width: 42px
+	a:nth-of-type(1)
+		padding: 0
 
 .logo
 	cursor: pointer
@@ -218,8 +222,28 @@ section:nth-of-type(even)
 		max-width: 320px
 		width: 100%
 	div
-		height: 3em
+		background: linear-gradient(rgba(0,204,242,1) 0%, rgba(240,147,247,1) 100%)
+		box-shadow: 0px 5px 5px black
+		border-radius: 40px
+		position: relative
 		margin: 0 auto
+		z-index: 1
+		&::before
+			background: white
+			border-radius: 40px
+			box-shadow: 0px 5px 3px black
+			content: ''
+			height: 125%
+			left: -12.5%
+			position: absolute
+			opacity: 0.5
+			top: -12.5%
+			width: 125%
+			z-index: -1
+		h2
+			font-weight: 700
+			letter-spacing: 2px
+			padding-bottom: .5em
 
 .introSecond
 	align-items: center

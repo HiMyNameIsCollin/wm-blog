@@ -37,7 +37,7 @@ const Posts = (props) => {
 					{
 						posts.map((post, i) => {
 							return(
-			                  <Link href='/post/[slug]' as={`/post/${post.slug}`}>
+			                  <Link key={i} href='/post/[slug]' as={`/post/${post.slug}`}>
 			                    <a className='postCard' onClick={() => setLoading(true)}>
 			                      <h3> {post.title}</h3>
 			                      <img
