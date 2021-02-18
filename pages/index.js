@@ -52,7 +52,7 @@ export default function Home(props) {
             <p> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquid quod illum omnis autem labore corporis ex alias voluptatum quasi, ut adipisci qui, expedita modi hic.</p>
             <p> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquid quod illum omnis autem labore corporis ex alias voluptatum quasi, ut adipisci qui, expedita modi hic.</p>
             <img src="/cookie1.jpg" alt="" />        
-            <p> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquid quod illum omnis autem labore corporis ex alias voluptatum quasi, ut adipisci qui, expedita modi hic.</p>  
+            <p> Check back often, for all things K-Pop, cookies, and stickers. </p>  
           </div>
         </section>
 
@@ -62,7 +62,7 @@ export default function Home(props) {
           <div className='postContainer'>
           {
             posts.map((post, i) => {
-              if(i < 8){
+              if(i < 6){
                 return(
                   <Link href='/post/[slug]' as={`/post/${post.slug}`}>
                     <a key={i} onClick={() => setLoading(true)} className='postCard'>

@@ -44,7 +44,7 @@ const Post = (props) => {
 	    };
 	    document.getElementById('commentSection').style.display = 'block'
 	   	const script = document.createElement('script')
-	   	script.src = 'https://blog3-3.disqus.com/embed.js';
+	   	script.src = 'https://blogwm.disqus.com/embed.js';
 	   	script.setAttribute('data-timestamp', Date.now().toString())
 	   	document.body.appendChild(script)
 	}

@@ -218,22 +218,22 @@ section:nth-of-type(even)
 		border: solid black 3px
 		border-radius: 5px
 		height: auto
-		margin: 1em auto
+		margin: 0 auto 1em auto
 		max-width: 320px
 		width: 100%
 	div
 		background: linear-gradient(rgba(0,204,242,1) 0%, rgba(240,147,247,1) 100%)
-		box-shadow: 0px 5px 5px black
-		border-radius: 40px
+		border-radius: 30px
+		border-bottom-left-radius: 0px
+		border-bottom-right-radius: 0px
 		position: relative
 		margin: 0 auto
 		z-index: 1
 		&::before
 			background: white
 			border-radius: 40px
-			box-shadow: 0px 5px 3px black
 			content: ''
-			height: 125%
+			height: 200%
 			left: -12.5%
 			position: absolute
 			opacity: 0.5
@@ -243,18 +243,20 @@ section:nth-of-type(even)
 		h2
 			font-weight: 700
 			letter-spacing: 2px
-			padding-bottom: .5em
+			padding: .5em 2em
 
 .introSecond
-	align-items: center
-	justify-content: center
+	align-items: start
+	justify-content: flex-start
 	padding: 2em 0
 	margin: auto
 	p
+		text-align: start
 		padding: 0 .5em
 		margin-bottom: 1em
 	img
 		@include shadow
+		align-self: center
 		border: solid black 3px
 		border-radius: 5px
 		height: auto
@@ -335,6 +337,7 @@ section:nth-of-type(even)
 	font-weight: 700
 	letter-spacing: 3px
 	padding: 1em
+	cursor: pointer
 
 .postCard
 	@include shadow
@@ -348,6 +351,7 @@ section:nth-of-type(even)
 	margin: 1em 0
 	max-height: 25em
 	position: relative
+	overflow: hidden
 	width: 100%
 	z-index: 1
 	&::before
@@ -362,14 +366,19 @@ section:nth-of-type(even)
 		border: solid black 3px
 		border-top: 0
 		border-bottom: 0
+		margin-top: auto
 		max-height: 100%
 		max-width: 100%
 		object-fit: cover
 	h3
 		background: black
 		color: white
+		left: 0
 		padding: 1em .5em
+		position: absolute
+		top: 0
 		width: 100%
+		z-index: 999
 	h5
 		background: black
 		border-top-right-radius: 5px
@@ -391,7 +400,7 @@ footer
 	justify-content: center
 	min-height: 3em
 	p
-		font-family: 'Hachi Haru Pop', cursive
+		font-family: 'Hachi Maru Pop', cursive
 		font-weight: 700
 		letter-spacing: 2px
 
@@ -434,7 +443,7 @@ footer
 				border-left: solid white 3px
 				border-right: solid white 3px
 			h3, h5
-				background: none
+				background: white
 				color: black
 
 	.openedPostSection

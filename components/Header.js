@@ -2,8 +2,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { useEffect } from 'react'
 import { useRouter } from 'next/router'
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"; 
-import { faTwitterSquare } from "@fortawesome/free-brands-svg-icons";
+
 
 const Header = ({setLoading}) => {
 
@@ -41,9 +40,13 @@ const Header = ({setLoading}) => {
 			</a>
 		</Link>
 
-     		<a className='twitterIcon' href='' target='_blank'>
+     		<a className='twitterIcon' href='https://twitter.com/whitneymayes' target='_blank'>
 	     		<h3>Follow me!</h3>
-	     		<FontAwesomeIcon icon={faTwitterSquare} size='3x' color='black' background='black'/>	     			
+	     		<Image 
+	     			alt=""
+	     			src='/twitter-square.png'		
+	     			height='48px'
+	     			width='48px'/> 			
      		</a>
 		</header>
 	)
